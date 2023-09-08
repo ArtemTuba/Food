@@ -12,7 +12,7 @@ function openModal(modalSelector, modalTimerId) {
     document.body.style.overflow = 'hidden';
 
     if(modalTimerId){
-        clearInterval(modalTimerId)
+        clearInterval(modalTimerId);
     }
     
 }
@@ -48,4 +48,4 @@ function modal(triggerSelector, modalSelector, modalTimerId){
 }
 
 export default modal;
-export {closeModal, openModal}
+export {closeModal, openModal};

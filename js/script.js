@@ -10,7 +10,7 @@ import { openModal } from './modules/modal';
 const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 300000);
 
 
-tabs('.tabheader__item', '.tabcontent', '.tabheader__items','tabheader__item_active')
+tabs('.tabheader__item', '.tabcontent', '.tabheader__items','tabheader__item_active');
 timer('.timer', '2023-09-30');
 modal('[data-modal]', '.modal', modalTimerId);
 cards();

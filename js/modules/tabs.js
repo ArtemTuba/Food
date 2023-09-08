@@ -1,19 +1,18 @@
 export default function tabs (tabsSelector, tabsContentSelector, tabsParentSelector, activeClass) {
     
-    let tabs = document.querySelectorAll(tabsSelector),
-    tabsContent = document.querySelectorAll(tabsContentSelector),
-    tabsParent = document.querySelector(tabsParentSelector);
+    let tabs = document.querySelectorAll(tabsSelector);
+    let tabsContent = document.querySelectorAll(tabsContentSelector);
+    let tabsParent = document.querySelector(tabsParentSelector);
 
     function hideTabContent() {
+        tabsContent.forEach(item => {
+            item.classList.add('hide');
+            item.classList.remove('show', 'fade');
+        });
 
-    tabsContent.forEach(item => {
-        item.classList.add('hide');
-        item.classList.remove('show', 'fade');
-    });
-
-    tabs.forEach(item => {
-        item.classList.remove(activeClass);
-    });
+        tabs.forEach(item => {
+            item.classList.remove(activeClass);
+        });
     }
 
     function showTabContent(i = 0) {

@@ -4,18 +4,17 @@ export default function calc(){
     
     
     if(localStorage.getItem('sex')){
-        sex = localStorage.getItem('sex')
+        sex = localStorage.getItem('sex');
     } else {
         sex = 'female';
-        localStorage.setItem('sex', 'female')
+        localStorage.setItem('sex', 'female');
     }
     
     if(localStorage.getItem('ratio')){
-        sex = localStorage.getItem('ratio')
-       
+        sex = localStorage.getItem('ratio');
     } else {
         let ratio = 1.375;
-        localStorage.setItem('ratio', 1.375)
+        localStorage.setItem('ratio', 1.375);
     }
     
     
@@ -25,10 +24,10 @@ export default function calc(){
         elements.forEach(elem => {
             elem.classList.remove(activeClass);
             if(elem.getAttribute('id') === localStorage.getItem('sex')){
-                elem.classList.add(activeClass)
+                elem.classList.add(activeClass);
             }
             if (elem.getAttribute('data-ratio') === localStorage.getItem('ratio')){
-                elem.classList.add(activeClass)
+                elem.classList.add(activeClass);
             }
         })
     }
@@ -65,10 +64,10 @@ export default function calc(){
                 }
         
                 elements.forEach(item => {
-                    item.classList.remove(activeClass)
+                    item.classList.remove(activeClass);
                 })
-                e.target.classList.add(activeClass)
-                calcTotal()
+                e.target.classList.add(activeClass);
+                calcTotal();
             })
         })
     }
@@ -98,10 +97,8 @@ export default function calc(){
                     age = +input.value;
                     break;
             }
-    
             calcTotal();
         });
-    
     }
     
     getDinamicInformation('#height');

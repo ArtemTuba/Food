@@ -69,7 +69,7 @@ export default function slider({container, slide, nextArrow, prevArrow, totalCou
         dot.classList.add('dot');
         i === 0 ?  dot.style.opacity = 1 :  dot.style.opacity = .5
         indicators.append(dot);
-        dots.push(dot)
+        dots.push(dot);
     }
     
     dots.forEach(dot => {
@@ -85,7 +85,7 @@ export default function slider({container, slide, nextArrow, prevArrow, totalCou
     
     function dotsActive(){
         dots.forEach(dot => dot.style.opacity = .5);
-        dots[slideIndex - 1].style.opacity = 1
+        dots[slideIndex - 1].style.opacity = 1;
     }
 }
 
